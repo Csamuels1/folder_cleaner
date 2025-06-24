@@ -8,7 +8,7 @@ def clean_temp_files():
 
 # validate folder exists
     if not os.path.isdir(folder_path):
-        print(f" Error: folder '{folder_path}' does not exist")
+        print(f" Error: folder '{folder_path}' does not exist.")
         return
 
         deleted_count = 0
