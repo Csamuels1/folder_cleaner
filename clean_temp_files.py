@@ -36,7 +36,8 @@ def clean_temp_files():
                     except Exception as e:
 
                         log_file.write(
-                            f" Failed to Delete {filename}: {str(e)}")
+                            f" Failed to Delete {filename}: {str(e)}\n")
+                        print(f" failed to delete {filename}:{str(e)}")
 
 # print summary
                         print(
