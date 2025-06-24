@@ -9,11 +9,12 @@ def clean_temp_files():
 # validate folder exists
     if not os.path.isdir(folder_path):
         print(f" Error: folder '{folder_path}' does not exist")
+        return
 
         deleted_count = 0
 
 # open log file for writing
-        with open("deleted_files.loog", "a") as log_file:
+        with open("deleted_files.log", "a") as log_file:
 
             # loop through all the files in the folder
             for filename in os.listdir(folder_path):
@@ -35,7 +36,7 @@ def clean_temp_files():
                     except Exception as e:
 
                         log_file.write(
-                            f" Failed to Delete {filename}: {str(e)}\n")
+                            f" Failed to Delete {filename}: {str(e)}")
 
 # print summary
                         print(
