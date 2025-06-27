@@ -1,1 +1,21 @@
+yaml
+---
+name: Run Python Script
 
+on: [push]
+
+jobs:
+run-script:
+runs-on: ubuntu-latest
+
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+- name: Set up Python
+uses: actions/setup-python@v5
+with:
+python version '3.15.5'
+
+- name: Run clean_temp_files.py
+run: python clean_temp_files.py
