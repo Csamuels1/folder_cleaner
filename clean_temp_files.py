@@ -4,7 +4,7 @@ import os
 def clean_temp_files():
 
     # ask user for folder path
-    folder_path = input("Enter folder to clean: ")
+    folder_path = "/path/to/clean"
 
 # validate folder exists
     if not os.path.isdir(folder_path):
