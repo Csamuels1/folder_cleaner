@@ -14,5 +14,3 @@ jobs:
         env:
             CLEAN_FOLDER: '/path/toclean'
         run: python clean_temp_files.py
-      - name: install dependencies
-        run: pip install -r requirements.txt
